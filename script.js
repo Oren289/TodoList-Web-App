@@ -97,6 +97,8 @@ function actions(e) {
       target.classList.toggle("fa-save");
       target.classList.toggle("fa-pen");
       target.parentElement.children[1].setAttribute("readonly", "readonly");
+      todoArray[index].text = target.parentElement.children[1].value;
+      localStorage.setItem("todo", JSON.stringify(todoArray));
     }
   }
 }
